@@ -10,7 +10,7 @@ import { stats } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100svh-72px)] overflow-hidden sm:min-h-[560px]">
+    <section className="relative min-h-[78svh] overflow-hidden sm:min-h-[calc(100svh-72px)]">
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
@@ -24,7 +24,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/35 to-black/70" />
 
-      <Container className="relative flex min-h-[calc(100svh-72px)] flex-col justify-center py-16 sm:min-h-[560px] sm:py-24">
+      <Container className="relative flex min-h-[78svh] flex-col justify-center py-10 sm:min-h-[calc(100svh-72px)] sm:py-24">
         <motion.div
           initial="hidden"
           animate="show"
