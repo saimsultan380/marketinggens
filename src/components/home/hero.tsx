@@ -24,12 +24,12 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/35 to-black/70" />
 
-      <Container className="relative flex min-h-[calc(100svh-72px)] flex-col items-center justify-center px-5 py-14 text-center sm:min-h-[560px] sm:py-20">
+      <Container className="relative flex min-h-[calc(100svh-72px)] flex-col justify-center py-16 sm:min-h-[560px] sm:py-24">
         <motion.div
           initial="hidden"
           animate="show"
           variants={stagger}
-          className="mx-auto max-w-3xl"
+          className="max-w-3xl text-left"
         >
           <motion.h1
             variants={fadeUp}
@@ -41,13 +41,13 @@ export function Hero() {
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:mt-6 sm:text-lg"
+            className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:mt-6 sm:text-lg"
           >
             We help local businesses, restaurants, ecommerce stores, and
             insurance agencies get a steady stream of leads and booked
             appointments — without you lifting a finger on marketing.
           </motion.p>
-          <motion.div variants={fadeUp} className="mt-6 flex justify-center sm:mt-8">
+          <motion.div variants={fadeUp} className="mt-6 sm:mt-8">
             <Button size="lg" asChild>
               <Link href="/audit">
                 Get My Free Business Audit
@@ -61,11 +61,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mt-12 w-full sm:mt-16"
+          className="mt-12 sm:mt-16"
         >
-          <div className="mx-auto grid max-w-xl grid-cols-3 gap-3 border-t border-white/20 pt-5 sm:gap-8">
+          <div className="grid max-w-xl grid-cols-3 gap-3 border-t border-white/20 pt-5 sm:gap-8">
             {stats.map((item) => (
-              <div key={item.label}>
+              <div key={item.label} className="text-left">
                 <p className="text-xl font-bold tracking-tight text-white sm:text-3xl">
                   {item.value}
                 </p>
