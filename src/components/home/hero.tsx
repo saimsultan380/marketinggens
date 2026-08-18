@@ -10,7 +10,7 @@ import { stats } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative h-[58svh] min-h-[400px] max-h-[500px] overflow-hidden sm:h-[calc(100svh-72px)] sm:min-h-[560px] sm:max-h-none">
+    <section className="relative min-h-[calc(100svh-72px)] overflow-hidden sm:min-h-[560px]">
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
@@ -22,18 +22,18 @@ export function Hero() {
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/55" />
-      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/35 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/35 to-black/70" />
 
-      <Container className="relative flex h-full flex-col justify-center pt-10 pb-20 sm:pt-20 sm:pb-28">
+      <Container className="relative flex min-h-[calc(100svh-72px)] flex-col items-center justify-center px-5 py-14 text-center sm:min-h-[560px] sm:py-20">
         <motion.div
           initial="hidden"
           animate="show"
           variants={stagger}
-          className="max-w-3xl"
+          className="mx-auto max-w-3xl"
         >
           <motion.h1
             variants={fadeUp}
-            className="text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-6xl lg:text-[68px]"
+            className="text-[32px] leading-[1.08] font-bold tracking-tight text-white sm:text-6xl lg:text-[68px]"
           >
             More Customers.
             <br />
@@ -41,13 +41,13 @@ export function Hero() {
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="mt-6 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg"
+            className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:mt-6 sm:text-lg"
           >
             We help local businesses, restaurants, ecommerce stores, and
             insurance agencies get a steady stream of leads and booked
             appointments — without you lifting a finger on marketing.
           </motion.p>
-          <motion.div variants={fadeUp} className="mt-8">
+          <motion.div variants={fadeUp} className="mt-6 flex justify-center sm:mt-8">
             <Button size="lg" asChild>
               <Link href="/audit">
                 Get My Free Business Audit
@@ -61,9 +61,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="absolute bottom-5 left-5 right-5 sm:bottom-8 sm:left-8 sm:right-8"
+          className="mt-12 w-full sm:mt-16"
         >
-          <div className="grid grid-cols-3 gap-3 border-t border-white/20 pt-4 sm:max-w-xl sm:gap-8 sm:pt-5">
+          <div className="mx-auto grid max-w-xl grid-cols-3 gap-3 border-t border-white/20 pt-5 sm:gap-8">
             {stats.map((item) => (
               <div key={item.label}>
                 <p className="text-xl font-bold tracking-tight text-white sm:text-3xl">

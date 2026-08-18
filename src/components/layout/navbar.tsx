@@ -19,8 +19,15 @@ export function Navbar() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white">
+    <header className="relative sticky top-0 z-50 border-b border-line bg-white">
       <Container className="flex h-[72px] items-center justify-between gap-4">
         <Link href="/" aria-label="MarketingGens home">
           <Logo />
@@ -88,39 +95,47 @@ export function Navbar() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-line bg-white lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-x-0 top-full z-50 lg:hidden"
           >
-            <Container className="flex flex-col gap-4 py-6">
-              {navLinks.map((link) => (
-                <div key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm font-semibold uppercase tracking-wide"
-                  >
-                    {link.label}
-                  </Link>
-                  {"children" in link && link.children ? (
-                    <div className="mt-2 flex flex-col gap-2 pl-3">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="text-sm text-muted"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-              ))}
-              <Button asChild className="mt-2">
-                <Link href="/audit">Get My Free Business Audit</Link>
-              </Button>
-            </Container>
+            <button
+              type="button"
+              className="fixed inset-0 top-[72px] bg-black/40"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+            />
+            <div className="relative max-h-[calc(100svh-72px)] overflow-y-auto border-t border-line bg-white shadow-lg">
+              <Container className="flex flex-col gap-4 py-6">
+                {navLinks.map((link) => (
+                  <div key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm font-semibold uppercase tracking-wide"
+                    >
+                      {link.label}
+                    </Link>
+                    {"children" in link && link.children ? (
+                      <div className="mt-2 flex flex-col gap-2 pl-3">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="text-sm text-muted"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+                <Button asChild className="mt-2">
+                  <Link href="/audit">Get My Free Business Audit</Link>
+                </Button>
+              </Container>
+            </div>
           </motion.div>
         ) : null}
       </AnimatePresence>

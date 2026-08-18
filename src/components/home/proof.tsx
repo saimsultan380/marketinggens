@@ -57,12 +57,12 @@ export function Proof() {
                   className="object-cover transition duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, 18vw"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-4">
-                  <p className="text-[11px] font-bold uppercase tracking-wide text-teal">
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-black/15" />
+                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+                  <p className="inline-flex rounded-full bg-teal px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:text-[11px]">
                     {item.type}
                   </p>
-                  <h3 className="mt-1 text-sm font-bold leading-snug text-white">
+                  <h3 className="mt-2 text-[13px] font-bold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)] sm:text-sm">
                     {item.title}
                   </h3>
                 </div>
