@@ -13,7 +13,7 @@ import {
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-teal">
+    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-bright-blue">
       {children}
     </p>
   );
@@ -23,7 +23,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="text-sm text-muted transition hover:text-teal"
+      className="text-sm text-slate-300 transition hover:text-white"
     >
       {label}
     </Link>
@@ -55,20 +55,20 @@ function SocialIcon({ name }: { name: "linkedin" | "facebook" | "instagram" }) {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-line bg-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-primary-navy text-white">
       <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-teal/10 blur-3xl"
+        className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-bright-blue/10 blur-3xl"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-16 top-10 h-52 w-52 rounded-full bg-teal/10 blur-3xl"
+        className="pointer-events-none absolute -right-16 top-10 h-52 w-52 rounded-full bg-bright-blue/10 blur-3xl"
         aria-hidden
       />
 
       <Container className="relative grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-6">
         <div className="sm:col-span-2">
-          <Logo />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+          <Logo light />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-300">
             We don&apos;t sell marketing. We sell leads, appointments, and growth.
           </p>
           <Button className="mt-6" asChild>
@@ -86,7 +86,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
-                className="grid h-10 w-10 place-items-center rounded-full border border-line text-black transition hover:border-teal hover:text-teal"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-white transition hover:border-bright-blue hover:text-bright-blue"
               >
                 <SocialIcon name={item.name} />
               </a>
@@ -119,7 +119,7 @@ export function Footer() {
             <li>
               <Link
                 href="/industries"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-teal"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-bright-blue hover:underline"
               >
                 All industries
                 <ArrowUpRight className="h-3.5 w-3.5" />
@@ -142,7 +142,7 @@ export function Footer() {
             <li>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-teal"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-bright-blue hover:underline"
               >
                 All services
                 <ArrowUpRight className="h-3.5 w-3.5" />
@@ -157,34 +157,34 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className="flex items-start gap-2.5 text-sm text-muted hover:text-teal"
+                className="flex items-start gap-2.5 text-sm text-slate-300 hover:text-white"
               >
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-bright-blue" />
                 {site.email}
               </a>
             </li>
             <li>
               <a
                 href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
-                className="flex items-start gap-2.5 text-sm text-muted hover:text-teal"
+                className="flex items-start gap-2.5 text-sm text-slate-300 hover:text-white"
               >
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-bright-blue" />
                 {site.phone}
               </a>
             </li>
-            <li className="flex items-start gap-2.5 text-sm text-muted">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
+            <li className="flex items-start gap-2.5 text-sm text-slate-300">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-bright-blue" />
               {site.hours}
             </li>
-            <li className="flex items-start gap-2.5 text-sm text-muted">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
+            <li className="flex items-start gap-2.5 text-sm text-slate-300">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-bright-blue" />
               {site.location}
             </li>
           </ul>
         </div>
       </Container>
 
-      <Container className="relative flex flex-col gap-4 border-t border-line py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+      <Container className="relative flex flex-col gap-4 border-t border-white/10 py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {site.name}. All rights reserved.
         </p>

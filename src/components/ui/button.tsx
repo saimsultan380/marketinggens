@@ -9,11 +9,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-teal text-white hover:bg-teal-dark shadow-[0_8px_24px_rgba(15,186,178,0.28)]",
-        gradient: "btn-gradient shadow-[0_8px_24px_rgba(15,186,178,0.28)]",
+          "bg-corporate-blue text-white hover:bg-bright-blue shadow-md hover:shadow-lg",
+        gradient: "btn-gradient shadow-md hover:shadow-lg",
         outline:
-          "border border-teal bg-white text-teal hover:bg-teal hover:text-white",
-        ghost: "text-black hover:text-teal",
+          "border border-corporate-blue bg-white text-corporate-blue hover:bg-corporate-blue hover:text-white",
+        ghost: "text-dark-text hover:text-corporate-blue",
       },
       size: {
         sm: "h-9 px-4 text-sm",

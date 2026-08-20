@@ -18,7 +18,7 @@ export function Logo({
       >
         <path
           d="M4 8.5L17 4l13 4.5v10.2c0 6.3-5.4 11.6-13 13.8C9.4 30.3 4 25 4 18.7V8.5z"
-          fill="#0FBAB2"
+          fill="#1D4ED8"
         />
         <path
           d="M11 22V12h3.1l2.9 6.4L19.9 12H23v10h-2.3v-6.1L18.2 22h-2.4l-2.5-6.1V22H11z"

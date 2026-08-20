@@ -160,38 +160,32 @@ export const serviceCards = [
   {
     title: "Meta Ads",
     body: "High-converting Facebook & Instagram ad campaigns engineered to capture qualified leads rather than empty clicks.",
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-meta-ads.png",
   },
   {
     title: "Email Marketing",
     body: "Automate smart email & SMS follow-ups that turn prospects into booked clients and keep past customers returning.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-email-marketing.png",
   },
   {
     title: "Content Marketing",
     body: "Publish strategic content that builds instant credibility, boosts organic search reach, and prompts visitors to request consultations.",
-    image:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-content-marketing.png",
   },
   {
     title: "Website Development",
     body: "Build lightning-fast, high-converting websites optimized specifically to capture lead info and fill your booking calendar.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-website-development.png",
   },
   {
     title: "App Development",
     body: "Custom web & mobile applications designed to automate client scheduling, remove busywork, and enhance customer experience.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-app-development.png",
   },
   {
     title: "Shopify",
     body: "High-converting Shopify stores optimized with streamlined checkouts to turn window shoppers into repeat orders.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-shopify.png",
   },
 ];
 

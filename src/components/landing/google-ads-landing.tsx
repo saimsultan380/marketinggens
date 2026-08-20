@@ -208,9 +208,9 @@ export function GoogleAdsLanding() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Dark Overlays for optimal readability */}
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/35 to-black/50" />
+        {/* Dark Overlays for optimal readability - Pure Black */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/55 to-black/75" />
 
         <Container className="relative z-10">
           {/* Top Floating Badges */}
@@ -371,27 +371,27 @@ export function GoogleAdsLanding() {
               </div>
             </FadeIn>
 
-            {/* Right Card: MarketingGens Solution (Teal Accent & Glow) */}
+            {/* Right Card: MarketingGens Solution (Corporate Blue Accent) */}
             <FadeIn delay={0.2}>
-              <div className="h-full rounded-3xl border-2 border-teal bg-[#f4faf9] p-8 sm:p-10 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 rounded-bl-2xl bg-teal px-4 py-1.5 text-xs font-bold text-white uppercase tracking-wider">
+              <div className="h-full rounded-3xl border-2 border-corporate-blue bg-light-blue p-8 sm:p-10 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 rounded-bl-2xl bg-corporate-blue px-4 py-1.5 text-xs font-bold text-white uppercase tracking-wider">
                   Proven System
                 </div>
 
-                <div className="flex items-center gap-3 border-b border-teal/20 pb-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal text-white shadow-md">
+                <div className="flex items-center gap-3 border-b border-corporate-blue/20 pb-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-corporate-blue text-white shadow-md">
                     <CheckCircle2 className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-black">MarketingGens Lead Engine</h3>
-                    <p className="text-xs text-teal font-semibold">The High-Converting Way</p>
+                    <p className="text-xs text-corporate-blue font-semibold">The High-Converting Way</p>
                   </div>
                 </div>
 
                 <ul className="mt-6 space-y-4">
                   {marketingGensSolutions.map((solution) => (
                     <li key={solution} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-teal" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-corporate-blue" />
                       <span className="text-sm font-medium leading-relaxed text-black">{solution}</span>
                     </li>
                   ))}
@@ -402,7 +402,7 @@ export function GoogleAdsLanding() {
 
           {/* Callout Action Bar */}
           <FadeIn className="mt-12">
-            <div className="rounded-3xl border border-teal/20 bg-linear-to-r from-[#f7fcfb] to-white p-8 text-center shadow-xs">
+            <div className="rounded-3xl border border-corporate-blue/20 bg-light-blue p-8 text-center shadow-xs">
               <p className="text-base font-medium leading-relaxed text-black sm:text-lg max-w-3xl mx-auto">
                 If you are ready to eliminate wasted ad spend and start turning searchers into booked appointments, let us evaluate your market for free.
               </p>
@@ -660,34 +660,25 @@ export function GoogleAdsLanding() {
         </Container>
       </section>
 
-      {/* 10. FINAL CTA SECTION WITH GLOW GRAPHICS */}
-      <section className="bg-[#f7fcfb] py-20 sm:py-28 border-t border-teal/15 relative">
+      {/* 10. FINAL CTA SECTION (PRIMARY NAVY MAJOR SECTION) */}
+      <section className="bg-primary-navy py-20 sm:py-28 text-white relative">
         <Container>
           <FadeIn>
-            <div className="relative overflow-hidden rounded-3xl border border-teal/20 bg-white p-8 sm:p-12 md:p-16 shadow-[0_20px_50px_rgba(15,186,178,0.12)] text-center">
-              <div
-                className="pointer-events-none absolute -right-10 -bottom-16 h-72 w-72 rounded-full bg-teal/10 blur-3xl"
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-teal/8 blur-3xl"
-                aria-hidden
-              />
-
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-teal/10 px-3.5 py-1 text-xs font-bold text-teal uppercase tracking-wider mb-4">
+            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur-md p-8 sm:p-12 md:p-16 text-center shadow-2xl">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-bold text-bright-blue uppercase tracking-wider mb-4 border border-white/10">
                 <CalendarCheck2 className="h-4 w-4" /> Claim Your Growth Audit
               </div>
 
-              <h2 className="relative text-3xl font-extrabold tracking-tight text-black sm:text-5xl">
+              <h2 className="relative text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
                 Ready to Fill Your Calendar With Qualified Leads?
               </h2>
 
-              <p className="relative mx-auto mt-4 max-w-2xl text-base text-muted sm:text-lg">
+              <p className="relative mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
                 Book your free, no-obligation business evaluation today. We will show you exactly how many leads your business is missing out on and how to capture them predictably.
               </p>
 
               <div className="relative mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button size="lg" className="shadow-md hover:scale-[1.02] transition-transform" asChild>
+                <Button size="lg" className="shadow-lg hover:scale-[1.02] transition-transform" asChild>
                   <a href="#audit-form">
                     Book My Free Evaluation
                     <ArrowRight className="h-4 w-4" />
@@ -696,9 +687,9 @@ export function GoogleAdsLanding() {
 
                 <a
                   href={`tel:${site.phone}`}
-                  className="inline-flex h-12 items-center gap-2 rounded-full border border-teal bg-white px-7 text-sm font-semibold text-black transition hover:bg-teal hover:text-white"
+                  className="inline-flex h-12 items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 text-sm font-semibold text-white transition hover:bg-bright-blue hover:border-bright-blue hover:text-white"
                 >
-                  <Phone className="h-4 w-4 text-teal" />
+                  <Phone className="h-4 w-4 text-bright-blue" />
                   <span>Call {site.phone}</span>
                 </a>
               </div>

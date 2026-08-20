@@ -1,22 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --teal: #0fbab2;
-  --teal-dark: #0a9a94;
-  --black: #000000;
-  --white: #ffffff;
-  --muted: #5c5c5c;
-  --line: #e8e8e8;
+  /* Client Defined Color Theme Palette */
+  --primary-navy: #0B192C; /* Hero, footer, major sections */
+  --corporate-blue: #1D4ED8; /* Brand color, buttons, links */
+  --bright-blue: #3B82F6; /* Hover/highlight */
+  --light-blue: #F0F7FF; /* Backgrounds */
+  --white: #FFFFFF; /* Main background */
+  --off-white: #F8FAFC; /* Alternate sections */
+  --dark-text: #0F172A; /* Headings */
+  --gray-text: #475569; /* Body copy */
+  --border-color: #E2E8F0; /* Cards/dividers */
+
+  /* Legacy variable mappings for backward compatibility */
+  --teal: var(--corporate-blue);
+  --teal-dark: #1E40AF;
+  --black: var(--dark-text);
+  --muted: var(--gray-text);
+  --line: var(--border-color);
 }
 
 @theme inline {
   --font-sans: Itcavantgardestd, Arial, sans-serif;
-  --color-teal: var(--teal);
-  --color-teal-dark: var(--teal-dark);
-  --color-black: var(--black);
-  --color-white: var(--white);
-  --color-muted: var(--muted);
-  --color-line: var(--line);
+
+  --color-primary-navy: var(--primary-navy);
+  --color-corporate-blue: var(--corporate-blue);
+  --color-bright-blue: var(--bright-blue);
+  --color-light-blue: var(--light-blue);
+  --color-off-white: var(--off-white);
+  --color-dark-text: var(--dark-text);
+  --color-gray-text: var(--gray-text);
+  --color-border: var(--border-color);
+
+  --color-teal: var(--corporate-blue);
+  --color-teal-dark: #1E40AF;
+  --color-black: var(--dark-text);
+  --color-white: #FFFFFF;
+  --color-muted: var(--gray-text);
+  --color-line: var(--border-color);
 }
 
 html {
@@ -25,8 +46,8 @@ html {
 
 html,
 body {
-  background: #ffffff;
-  color: #000000;
+  background: var(--white);
+  color: var(--dark-text);
 }
 
 body {
@@ -35,16 +56,16 @@ body {
 }
 
 ::selection {
-  background: #0fbab2;
+  background: var(--corporate-blue);
   color: #ffffff;
 }
 
 .text-heading-gradient {
   background-image: linear-gradient(
     100deg,
-    #087f7a 0%,
-    #0fbab2 52%,
-    #0a9a94 100%
+    #0F172A 0%,
+    #1D4ED8 52%,
+    #3B82F6 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -54,11 +75,9 @@ body {
 .btn-gradient {
   background-image: linear-gradient(
     105deg,
-    #000000 0%,
-    #0a9a94 38%,
-    #0fbab2 58%,
-    #0a9a94 82%,
-    #087f7a 100%
+    #0B192C 0%,
+    #1D4ED8 50%,
+    #3B82F6 100%
   );
   background-size: 160% 100%;
   color: #ffffff;
@@ -69,50 +88,6 @@ body {
   background-position: 100% 0;
 }
 
-.teal-glow {
-  background: radial-gradient(
-    ellipse at 80% 70%,
-    rgba(15, 186, 178, 0.28) 0%,
-    rgba(15, 186, 178, 0.08) 38%,
-    transparent 70%
-  );
-}
-
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.marquee-mask {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 6%,
-    #000 94%,
-    transparent
-  );
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 42s linear infinite;
-  will-change: transform;
-}
-
-.marquee-track-reverse {
-  animation-duration: 48s;
-  animation-direction: reverse;
-}
-
-.marquee-group:hover .marquee-track {
-  animation-play-state: paused;
-}
-
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -120,10 +95,4 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
 }
