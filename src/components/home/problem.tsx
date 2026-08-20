@@ -11,7 +11,7 @@ export function Problem() {
           <SectionHeading
             eyebrow="The Problem"
             title="Your Business Deserves More Customers Than It's Getting"
-            body="You didn't open a business to spend nights guessing at ads. You opened it to serve people — and still, the calendar stays patchy."
+            body="You did not open a business to spend your nights guessing at ads. You opened it to serve people, and the calendar still stays patchy."
           />
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -26,6 +26,9 @@ export function Problem() {
               </li>
             ))}
           </ul>
+          <p className="mt-6 text-[15px] leading-relaxed text-muted sm:text-base">
+            If any of this sounds familiar, you are not alone, and it is not a &quot;you&quot; problem. It is a visibility and follow-up problem, and it is fixable.
+          </p>
         </FadeIn>
       </Container>
     </section>

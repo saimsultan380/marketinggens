@@ -43,9 +43,9 @@ export function Hero() {
             variants={fadeUp}
             className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:mt-6 sm:text-lg"
           >
-            We help local businesses, restaurants, ecommerce stores, and
-            insurance agencies get a steady stream of leads and booked
-            appointments — without you lifting a finger on marketing.
+            We get local businesses, restaurants, ecommerce stores, insurance,
+            medical and healthcare agencies more leads and booked appointments.
+            Free business audit, no pressure.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-6 sm:mt-8">
             <Button size="lg" asChild>

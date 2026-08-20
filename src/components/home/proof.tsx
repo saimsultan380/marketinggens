@@ -8,30 +8,38 @@ import { stats, stories } from "@/lib/site";
 
 export function Proof() {
   return (
-    <section id="results" className="relative overflow-hidden bg-white py-20 sm:py-28">
-      <div className="teal-glow pointer-events-none absolute inset-0" aria-hidden />
-      <Container className="relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+    <section id="results" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32">
+      <div className="teal-glow pointer-events-none absolute inset-0 opacity-40" aria-hidden />
+      <Container className="relative grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <FadeIn>
-          <p className="text-[12px] font-bold uppercase tracking-[0.22em] text-teal">
+          <span className="text-[12px] font-bold uppercase tracking-[0.22em] text-teal">
             Featured Insights
-          </p>
-          <h2 className="mt-4 text-4xl leading-[1.12] font-bold tracking-tight text-black sm:text-5xl">
+          </span>
+          <h2 className="mt-4 text-4xl leading-[1.1] font-bold tracking-tight text-black sm:text-5xl lg:text-[56px]">
             Real businesses. Real{" "}
             <span className="text-heading-gradient">growth.</span>
           </h2>
-          <p className="mt-4 text-lg text-muted">From first call to a fuller calendar.</p>
-          <div className="mt-8 flex flex-wrap gap-8">
+          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+            From first call to a fuller calendar.
+          </p>
+
+          <div className="mt-10 grid grid-cols-3 gap-4 border-y border-line py-6 sm:gap-6">
             {stats.map((item) => (
               <div key={item.label}>
-                <p className="text-3xl font-bold text-black">{item.value}</p>
-                <p className="mt-1 text-sm text-muted">{item.label}</p>
+                <p className="text-2xl font-extrabold tracking-tight text-black sm:text-3xl lg:text-4xl">
+                  {item.value}
+                </p>
+                <p className="mt-1 text-xs text-muted sm:text-sm font-medium">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
-          <Button variant="gradient" className="mt-8" asChild>
+
+          <Button size="lg" className="mt-8" asChild>
             <Link href="/results">
               Explore More
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Button>
         </FadeIn>
@@ -43,26 +51,26 @@ export function Proof() {
               delay={i * 0.06}
               className={
                 i % 3 === 1
-                  ? "sm:translate-y-8"
+                  ? "sm:translate-y-6"
                   : i % 3 === 2
-                    ? "sm:translate-y-16"
+                    ? "sm:translate-y-12"
                     : ""
               }
             >
-              <article className="group relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.12)]">
+              <article className="group relative aspect-[3.8/5] overflow-hidden rounded-2xl border border-line/60 bg-black/5 shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition duration-300 hover:shadow-[0_20px_40px_rgba(15,186,178,0.18)]">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 50vw, 18vw"
+                  sizes="(max-width: 640px) 50vw, 20vw"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-black/15" />
-                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                  <p className="inline-flex rounded-full bg-teal px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:text-[11px]">
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-black/10 transition duration-300 group-hover:from-black/95 group-hover:via-black/55" />
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                  <span className="inline-block rounded-md bg-teal px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-xs sm:text-[11px]">
                     {item.type}
-                  </p>
-                  <h3 className="mt-2 text-[13px] font-bold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)] sm:text-sm">
+                  </span>
+                  <h3 className="mt-2.5 text-[13px] font-medium leading-snug text-white/95 sm:text-[14px]">
                     {item.title}
                   </h3>
                 </div>

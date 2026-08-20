@@ -32,7 +32,7 @@ export function HowItWorks() {
         <FadeIn className="mt-10">
           <Button variant="outline" asChild>
             <Link href="/how-it-works">
-              See the full process
+              See the Full Process
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

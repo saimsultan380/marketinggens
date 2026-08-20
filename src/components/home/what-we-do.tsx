@@ -1,4 +1,7 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/motion/fade-in";
+import { Button } from "@/components/ui/button";
 import { Container, SectionHeading } from "@/components/ui/primitives";
 import { outcomes } from "@/lib/site";
 
@@ -14,10 +17,10 @@ export function WhatWeDo() {
           <SectionHeading
             eyebrow="What We Do"
             title="Transform Your Business"
-            body="We fill your calendar. You focus on running the business."
+            body="Everything You Need to Grow. Nothing You Have to Manage."
           />
         </FadeIn>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {outcomes.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.06}>
               <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-7">
@@ -30,6 +33,14 @@ export function WhatWeDo() {
             </FadeIn>
           ))}
         </div>
+        <FadeIn className="mt-10">
+          <Button size="lg" asChild>
+            <Link href="/audit">
+              Book Appointment
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+        </FadeIn>
       </Container>
     </section>
   );

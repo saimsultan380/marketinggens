@@ -2,7 +2,7 @@ export const site = {
   name: "MarketingGens",
   tagline: "More customers. Predictably. Every month.",
   description:
-    "We help local businesses, restaurants, ecommerce stores, and insurance agencies get a steady stream of leads and booked appointments.",
+    "We get local businesses, restaurants, ecommerce stores, insurance, medical and healthcare agencies more leads and booked appointments. Free business audit, no pressure.",
   email: "hello@marketinggens.com",
   phone: "(800) 555-0148",
   hours: "Mon–Fri, 9am–6pm ET",
@@ -36,7 +36,17 @@ export const navLinks = [
       { href: "/industries/medical", label: "Medical & Wellness" },
     ],
   },
-  { href: "/services", label: "Services" },
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/services/google-ads", label: "Google Ads" },
+      { href: "/services#local-seo", label: "Local SEO" },
+      { href: "/services#social-media-marketing", label: "Social Media Marketing" },
+      { href: "/services#meta-ads", label: "Meta Ads" },
+      { href: "/services#email-marketing", label: "Email Marketing" },
+    ],
+  },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/results", label: "Results" },
   { href: "/about", label: "About" },
@@ -51,97 +61,135 @@ export const industries = [
   },
   {
     href: "/industries/restaurants",
-    title: "Restaurants",
+    title: "Restaurants & Food Services",
     body: "Bring new diners through the door and keep regulars coming back.",
   },
   {
     href: "/industries/ecommerce",
-    title: "Ecommerce",
+    title: "Ecommerce & Retail",
     body: "More traffic, more orders, more repeat buyers — without wasting ad spend.",
   },
   {
     href: "/industries/insurance",
-    title: "Insurance",
+    title: "Insurance Agencies",
     body: "Talk to people who are actually looking for coverage — not cold names on a list.",
   },
   {
     href: "/industries/medical",
-    title: "Medical & Wellness",
+    title: "Medical & Healthcare",
+    subtext: "(Dentists, Aesthetics/Med Spas, Private Doctors, Elder Care)",
+    body: "Dentists, Aesthetics/Med Spas, Private Doctors, Elder Care.",
+  },
+  {
+    href: "/industries/medical",
+    title: "Medical & Wellness Practices",
     body: "Fill appointment slots with patients who are ready to book.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Home Services & Contractors",
+    subtext: "(HVAC, Plumbing, Roofing, Electricians)",
+    body: "Book high-ticket jobs for HVAC, plumbing, roofing, and remodeling.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Salons, Beauty & Spas",
+    body: "Fill your appointment chairs with regular clients who keep returning.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Fitness Centers & Gyms",
+    body: "Drive new gym memberships and personal training consultations.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Real Estate & Mortgage",
+    body: "Connect with buyers and sellers actively seeking agents and loan officers.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Automotive & Repair Services",
+    body: "Keep auto repair bays full with drivers who need local service.",
+  },
+  {
+    href: "/industries/local-businesses",
+    title: "Professional & Legal Services",
+    body: "Attract qualified legal, accounting, and consulting clients.",
   },
 ];
 
 export const outcomes = [
   {
-    title: "New Customers Every Week",
-    body: "A steady flow of people who want what you offer — not a lucky month, then silence.",
+    title: "Get Found First",
+    body: "Show up when local customers search for what you offer. (Local SEO and Google Business Profile optimization)",
   },
   {
-    title: "Booked Appointments, Not Just Clicks",
-    body: "We don't stop at website visits. We help turn interest into real bookings on your calendar.",
+    title: "Get Booked Automatically",
+    body: "Turn website visitors into booked appointments, even while you sleep. (Automated booking and follow-up systems)",
   },
   {
-    title: "Show Up First When People Search for You",
-    body: "When someone nearby needs your service, they should find you — not the competitor down the street.",
+    title: "Get Steady Leads",
+    body: "A predictable flow of new customer inquiries every month. (Google Ads, Meta Ads, and lead gen campaigns)",
   },
   {
-    title: "We Handle Everything — You Just Show Up",
-    body: "You run the business. We handle the work of bringing customers in.",
+    title: "Get Repeat Customers",
+    body: "Stay top of mind so customers come back. (Email and SMS automation, retargeting)",
+  },
+  {
+    title: "Get Real Answers",
+    body: "Know exactly what is working and what is not, in plain language. (Reporting and analytics)",
   },
 ];
 
 export const serviceCards = [
   {
     title: "Google Ads",
-    body: "Reach people who are already searching for what you sell.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    body: "Target high-intent local buyers actively searching for your services to generate instant calls and booked appointments.",
+    image: "/service-google-ads.png",
   },
   {
     title: "Local SEO",
-    body: "Show up first on Google when nearby customers look for your business.",
-    image:
-      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&q=80",
+    body: "Dominate local Google search and Map Pack rankings so nearby clients find your business first and call directly.",
+    image: "/service-local-seo.png",
   },
   {
     title: "Social Media Marketing",
-    body: "Stay in front of the right people on Facebook, Instagram, and more.",
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+    body: "Build strong brand awareness on Facebook & Instagram to drive local engagement and consistently convert viewers into leads.",
+    image: "/service-social-media.png",
   },
   {
     title: "Meta Ads",
-    body: "Facebook and Instagram ads that bring in real leads, not empty clicks.",
+    body: "High-converting Facebook & Instagram ad campaigns engineered to capture qualified leads rather than empty clicks.",
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Email Marketing",
-    body: "Follow up automatically so past visitors and customers come back.",
+    body: "Automate smart email & SMS follow-ups that turn prospects into booked clients and keep past customers returning.",
     image:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Content Marketing",
-    body: "Useful content that helps people find you and trust you before they call.",
+    body: "Publish strategic content that builds instant credibility, boosts organic search reach, and prompts visitors to request consultations.",
     image:
       "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Website Development",
-    body: "Fast, clear websites that turn visitors into calls, bookings, and sales.",
+    body: "Build lightning-fast, high-converting websites optimized specifically to capture lead info and fill your booking calendar.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "App Development",
-    body: "Custom apps that take busywork off your plate and help you serve more customers.",
+    body: "Custom web & mobile applications designed to automate client scheduling, remove busywork, and enhance customer experience.",
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Shopify",
-    body: "Shopify stores and apps built to convert browsers into buyers.",
+    body: "High-converting Shopify stores optimized with streamlined checkouts to turn window shoppers into repeat orders.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
   },
@@ -151,12 +199,12 @@ export const steps = [
   {
     step: "01",
     title: "Free Audit",
-    body: "We look at where you're losing customers today. No cost. No pitch deck.",
+    body: "We look at where you are losing customers today. No cost, no pitch deck.",
   },
   {
     step: "02",
     title: "Custom Growth Plan",
-    body: "If we can help, you'll see a plain-English plan with real numbers — not jargon.",
+    body: "If we can help, you get a plain-English plan with real numbers, not jargon.",
   },
   {
     step: "03",
@@ -166,11 +214,11 @@ export const steps = [
 ];
 
 export const problems = [
-  "Walk-ins that come in waves — then nothing for days",
-  "Empty appointment slots you can't seem to fill",
-  "Competitors showing up first when people search on Google",
-  "Relying only on word of mouth to grow",
-  "No time (or patience) to figure out marketing yourself",
+  "Walk-ins come in waves, then nothing for days",
+  "Appointment slots sit empty and you cannot figure out why",
+  "Competitors show up first when people search for you on Google",
+  "You are stuck relying on word of mouth to grow",
+  "You do not have the time or patience to learn marketing yourself",
 ];
 
 export const stats = [
