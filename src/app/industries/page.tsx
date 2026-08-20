@@ -17,16 +17,21 @@ export default function IndustriesPage() {
         <p className="mt-4 max-w-xl text-lg text-muted">
           Pick your business type. We&apos;ll show you how we fill the calendar.
         </p>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((item) => (
             <Link
               key={item.title}
-              id={item.href.split("/").pop()}
-              href="/audit"
-              className="rounded-2xl border border-line p-7 hover:border-teal scroll-mt-24"
+              href={item.href}
+              className="group rounded-2xl border border-line p-7 hover:border-corporate-blue transition duration-200 shadow-xs hover:shadow-md bg-white hover:bg-blue-50/20 flex flex-col justify-between"
             >
-              <h2 className="text-2xl font-bold text-black">{item.title}</h2>
-              <p className="mt-3 text-sm text-muted">{item.body}</p>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 group-hover:text-corporate-blue transition-colors">{item.title}</h2>
+                <p className="mt-3 text-sm text-slate-600 font-normal leading-relaxed">{item.body}</p>
+              </div>
+              <div className="mt-6 flex items-center gap-1.5 text-xs font-bold text-corporate-blue">
+                <span>View Industry Blueprint</span>
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </div>
             </Link>
           ))}
         </div>

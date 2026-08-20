@@ -21,7 +21,7 @@
 }
 
 @theme inline {
-  --font-sans: Itcavantgardestd, Arial, sans-serif;
+  --font-sans: var(--font-poppins), Poppins, sans-serif;
 
   --color-primary-navy: var(--primary-navy);
   --color-corporate-blue: var(--corporate-blue);
@@ -51,25 +51,63 @@ body {
 }
 
 body {
-  font-family: Itcavantgardestd, Arial, sans-serif;
+  font-family: var(--font-poppins), Poppins, sans-serif;
   min-height: 100%;
 }
 
-::selection {
-  background: var(--corporate-blue);
-  color: #ffffff;
+/* Force light gray borders for form inputs across all browsers */
+input,
+select,
+textarea {
+  border: 1px solid #E2E8F0 !important;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1D4ED8 !important;
+  background-color: #FFFFFF !important;
+  outline: none;
 }
 
 .text-heading-gradient {
   background-image: linear-gradient(
     100deg,
-    #0F172A 0%,
-    #1D4ED8 52%,
-    #3B82F6 100%
+    #2563EB 0%,
+    #3B82F6 50%,
+    #60A5FA 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.text-heading-gradient-light {
+  background-image: linear-gradient(
+    95deg,
+    #38BDF8 0%,
+    #60A5FA 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Chrome/Safari Autofill background override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0F172A;
+  -webkit-box-shadow: 0 0 0px 1000px #F8FAFC inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .btn-gradient {

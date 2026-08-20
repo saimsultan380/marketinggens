@@ -20,8 +20,9 @@ export function Cta() {
             />
             <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
               <div className="max-w-2xl text-left">
-                <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl lg:text-5xl">
-                  Let&apos;s See How Many Customers You&apos;re Missing Out On
+                <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl lg:text-5xl">
+                  Let&apos;s See How Many Customers You&apos;re{" "}
+                  <span className="text-heading-gradient">Missing Out On.</span>
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
                   Book a free, no-obligation business evaluation. We&apos;ll tell you

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { GoogleAdsLanding } from "@/components/landing/google-ads-landing";
-import { site } from "@/lib/site";
+import { ServicePageLanding } from "@/components/landing/service-page-landing";
+import { servicesData } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   title: "Google Ads Management for Local Businesses | MarketingGens",
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesGoogleAdsPage() {
-  return <GoogleAdsLanding />;
+  return <ServicePageLanding data={servicesData["google-ads"]} />;
 }

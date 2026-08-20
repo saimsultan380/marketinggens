@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { GoogleAdsLanding } from "@/components/landing/google-ads-landing";
+import { ServicePageLanding } from "@/components/landing/service-page-landing";
+import { servicesData } from "@/lib/services-data";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -99,7 +100,7 @@ export default function GoogleAdsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <GoogleAdsLanding />
+      <ServicePageLanding data={servicesData["google-ads"]} />
     </>
   );
 }

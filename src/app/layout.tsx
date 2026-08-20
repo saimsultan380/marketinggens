@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { SiteShell } from "@/components/layout/site-shell";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const outfit = Outfit({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-outfit",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${outfit.variable} h-full antialiased`}>
+    <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <body
-        className={`${outfit.className} flex min-h-full flex-col bg-white text-black`}
+        className={`${poppins.className} flex min-h-full flex-col bg-white text-black`}
         style={{
-          fontFamily: `Itcavantgardestd, ${outfit.style.fontFamily}, Arial, sans-serif`,
+          fontFamily: `${poppins.style.fontFamily}, sans-serif`,
         }}
       >
         <Providers>

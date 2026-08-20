@@ -108,12 +108,9 @@ export function Footer() {
         <div>
           <FooterHeading>Industries</FooterHeading>
           <ul className="mt-4 space-y-2.5">
-            {industries.map((item) => (
-              <li key={item.href}>
-                <FooterLink
-                  href={`/industries#${item.href.split("/").pop()}`}
-                  label={item.title}
-                />
+            {industries.slice(0, 6).map((item) => (
+              <li key={item.title}>
+                <FooterLink href={item.href} label={item.title} />
               </li>
             ))}
             <li>
@@ -131,14 +128,25 @@ export function Footer() {
         <div>
           <FooterHeading>Services</FooterHeading>
           <ul className="mt-4 space-y-2.5">
-            {serviceCards.slice(0, 6).map((item) => (
-              <li key={item.title}>
-                <FooterLink
-                  href={`/services#${item.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  label={item.title}
-                />
-              </li>
-            ))}
+            {serviceCards.slice(0, 6).map((item) => {
+              const slugMap: Record<string, string> = {
+                "Google Ads": "google-ads",
+                "Local SEO": "local-seo",
+                "Social Media Marketing": "social-media",
+                "Meta Ads": "meta-ads",
+                "Email Marketing": "email-marketing",
+                "Content Marketing": "content-marketing",
+                "Website Development": "website-development",
+                "App Development": "app-development",
+                Shopify: "shopify",
+              };
+              const href = `/services/${slugMap[item.title] || item.title.toLowerCase().replace(/\s+/g, "-")}`;
+              return (
+                <li key={item.title}>
+                  <FooterLink href={href} label={item.title} />
+                </li>
+              );
+            })}
             <li>
               <Link
                 href="/services"

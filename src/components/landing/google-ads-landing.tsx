@@ -208,19 +208,19 @@ export function GoogleAdsLanding() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Dark Overlays for optimal readability - Pure Black */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/55 to-black/75" />
+        {/* Dark Overlays for optimal readability - Reduced Black Intensity */}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/35 to-black/50" />
 
         <Container className="relative z-10">
           {/* Top Floating Badges */}
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-xs px-3.5 py-1 text-xs font-medium text-white/90">
-              <Star className="h-3.5 w-3.5 fill-teal text-teal" />
+              <Star className="h-3.5 w-3.5 fill-corporate-blue text-corporate-blue" />
               <span>4.9/5 Rating across 120+ local businesses</span>
             </div>
             <div className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-xs px-3.5 py-1 text-xs font-medium text-white/90">
-              <CheckCircle2 className="h-3.5 w-3.5 text-teal" />
+              <CheckCircle2 className="h-3.5 w-3.5 text-corporate-blue" />
               <span>18,000+ Qualified leads delivered</span>
             </div>
           </div>
@@ -228,8 +228,9 @@ export function GoogleAdsLanding() {
           <div className="grid items-center gap-12 lg:grid-cols-12">
             {/* Left Content Column */}
             <div className="lg:col-span-7 text-left">
-              <h1 className="text-3xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[52px]">
-                Get More Qualified Leads & Booked Appointments For Your Business
+              <h1 className="text-3xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[52px]">
+                Get More Qualified Leads & Booked Appointments For Your{" "}
+                <span className="text-heading-gradient-light">Business.</span>
               </h1>
 
               <p className="mt-5 text-base leading-relaxed text-white/90 sm:text-lg lg:text-xl max-w-2xl">
@@ -301,7 +302,7 @@ export function GoogleAdsLanding() {
               {featuredLogos.map((logo) => (
                 <span
                   key={logo}
-                  className="text-base font-extrabold tracking-tight text-black sm:text-lg hover:text-teal transition-colors cursor-default"
+                  className="text-base font-bold tracking-tight text-black sm:text-lg hover:text-teal transition-colors cursor-default"
                 >
                   {logo}
                 </span>
@@ -316,7 +317,7 @@ export function GoogleAdsLanding() {
                   className="group relative rounded-2xl border border-line bg-white p-6 shadow-xs transition hover:border-teal hover:shadow-md"
                 >
                   <div className="flex items-center justify-center gap-2">
-                    <p className="text-3xl font-extrabold text-black sm:text-4xl group-hover:text-teal transition-colors">
+                    <p className="text-3xl font-bold text-black sm:text-4xl group-hover:text-teal transition-colors">
                       {item.value}
                     </p>
                     {idx === 0 && <Users className="h-6 w-6 text-teal opacity-60" />}
@@ -340,7 +341,12 @@ export function GoogleAdsLanding() {
             <SectionHeading
               align="center"
               eyebrow="The PPC Reality"
-              title="Stop Wasted Spend. Start Generating Real Customers."
+              title={
+                <>
+                  Stop Wasted Spend. Start Generating{" "}
+                  <span className="text-heading-gradient">Real Customers.</span>
+                </>
+              }
               body="See the difference between traditional agency ad setups and MarketingGens dedicated lead generation engine."
             />
           </FadeIn>
@@ -420,12 +426,17 @@ export function GoogleAdsLanding() {
       </section>
 
       {/* 4. SOLUTION / BENEFITS SECTION WITH GRAPHIC CARDS */}
-      <section className="bg-[#fcfdfe] py-20 sm:py-28 border-y border-line">
+      <section className="bg-off-white py-20 sm:py-28 border-y border-line">
         <Container>
           <FadeIn>
             <SectionHeading
               eyebrow="Our Solution"
-              title="A Complete Lead Generation Engine Built For ROI"
+              title={
+                <>
+                  A Complete Lead Generation Engine Built For{" "}
+                  <span className="text-heading-gradient">ROI.</span>
+                </>
+              }
               body="We do not just run ads. We build a predictable system designed from search to calendar booking."
             />
           </FadeIn>
@@ -481,7 +492,12 @@ export function GoogleAdsLanding() {
           <FadeIn>
             <SectionHeading
               eyebrow="Why MarketingGens"
-              title="Built Different From Traditional Ad Agencies"
+              title={
+                <>
+                  Built Different From Traditional{" "}
+                  <span className="text-heading-gradient">Ad Agencies.</span>
+                </>
+              }
               body="We measure success by phone calls, booked appointments, and revenue, not vanity ad impressions."
             />
           </FadeIn>
@@ -491,8 +507,8 @@ export function GoogleAdsLanding() {
               const Icon = diff.icon;
               return (
                 <FadeIn key={diff.title} delay={i * 0.05}>
-                  <div className="group flex items-start gap-5 rounded-3xl border border-line bg-white p-8 shadow-xs transition duration-300 hover:border-teal hover:shadow-md">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal text-white shadow-md transition-transform group-hover:scale-105">
+                  <div className="group flex items-start gap-5 rounded-3xl border border-line bg-white p-8 shadow-xs transition duration-300 hover:border-corporate-blue hover:shadow-md">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-corporate-blue text-white shadow-md transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6" />
                     </div>
                     <div>
@@ -519,7 +535,7 @@ export function GoogleAdsLanding() {
             </Button>
             <a
               href={`tel:${site.phone}`}
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-teal px-6 text-sm font-semibold text-teal transition hover:bg-teal hover:text-white"
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-corporate-blue px-6 text-sm font-semibold text-corporate-blue transition hover:bg-corporate-blue hover:text-white"
             >
               <Phone className="h-4 w-4" />
               <span>Call Us Direct: {site.phone}</span>
@@ -529,13 +545,18 @@ export function GoogleAdsLanding() {
       </section>
 
       {/* 6. HOW IT WORKS SECTION WITH VISUAL CONNECTORS */}
-      <section className="bg-[#f7fcfb] py-20 sm:py-28 border-y border-teal/10 relative">
+      <section className="bg-light-blue py-20 sm:py-28 border-y border-line relative">
         <Container>
           <FadeIn>
             <SectionHeading
               align="center"
               eyebrow="Simple 3-Step Process"
-              title="Simple. Transparent. Zero Tech Headaches."
+              title={
+                <>
+                  Simple. Transparent. Zero{" "}
+                  <span className="text-heading-gradient">Tech Headaches.</span>
+                </>
+              }
               body="Three easy steps to turn search engine traffic into a full calendar of qualified clients."
             />
           </FadeIn>
@@ -543,12 +564,12 @@ export function GoogleAdsLanding() {
           <ol className="mt-14 grid gap-8 lg:grid-cols-3 relative">
             {steps.map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.08}>
-                <li className="group relative h-full rounded-3xl border border-line bg-white p-8 shadow-xs transition duration-300 hover:border-teal hover:shadow-lg">
+                <li className="group relative h-full rounded-3xl border border-line bg-white p-8 shadow-xs transition duration-300 hover:border-corporate-blue hover:shadow-lg">
                   <div className="flex items-center justify-between">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-teal text-white font-extrabold text-sm shadow-md">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-corporate-blue text-white font-bold text-sm shadow-md">
                       {item.step}
                     </span>
-                    <span className="rounded-full bg-teal/10 px-3 py-1 text-xs font-bold text-teal uppercase tracking-wider">
+                    <span className="rounded-full bg-corporate-blue/10 px-3 py-1 text-xs font-bold text-corporate-blue uppercase tracking-wider">
                       {item.badge}
                     </span>
                   </div>
@@ -571,7 +592,12 @@ export function GoogleAdsLanding() {
           <FadeIn>
             <SectionHeading
               eyebrow="What Is Included"
-              title="Everything Included In Your Google Ads Campaign"
+              title={
+                <>
+                  Everything Included In Your{" "}
+                  <span className="text-heading-gradient">Google Ads Campaign.</span>
+                </>
+              }
               body="Complete done-for-you service so you never have to worry about ad setups, landing pages, or tracking."
             />
           </FadeIn>
@@ -579,8 +605,8 @@ export function GoogleAdsLanding() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {includedFeatures.map((feature, i) => (
               <FadeIn key={feature} delay={i * 0.04}>
-                <div className="group flex items-start gap-3 rounded-2xl border border-line bg-white p-5 shadow-xs transition hover:border-teal hover:bg-[#f7fcfb]">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/10 text-teal transition group-hover:bg-teal group-hover:text-white">
+                <div className="group flex items-start gap-3 rounded-2xl border border-line bg-white p-5 shadow-xs transition hover:border-corporate-blue hover:bg-light-blue">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-corporate-blue/10 text-corporate-blue transition group-hover:bg-corporate-blue group-hover:text-white">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <span className="text-sm font-semibold text-black">
@@ -612,7 +638,12 @@ export function GoogleAdsLanding() {
             <SectionHeading
               align="center"
               eyebrow="Frequently Asked Questions"
-              title="Got Questions? We Have Honest Answers."
+              title={
+                <>
+                  Got Questions? We Have{" "}
+                  <span className="text-heading-gradient">Honest Answers.</span>
+                </>
+              }
               body="Everything you need to know before getting started with your Google Ads audit."
             />
           </FadeIn>
@@ -660,25 +691,26 @@ export function GoogleAdsLanding() {
         </Container>
       </section>
 
-      {/* 10. FINAL CTA SECTION (PRIMARY NAVY MAJOR SECTION) */}
-      <section className="bg-primary-navy py-20 sm:py-28 text-white relative">
+      {/* 10. FINAL CTA SECTION (MATCHES HOMEPAGE CTA STYLE) */}
+      <section className="bg-white pt-12 pb-20 sm:pt-16 sm:pb-28">
         <Container>
           <FadeIn>
-            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 backdrop-blur-md p-8 sm:p-12 md:p-16 text-center shadow-2xl">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-bold text-bright-blue uppercase tracking-wider mb-4 border border-white/10">
+            <div className="relative overflow-hidden rounded-3xl border border-corporate-blue/20 bg-light-blue p-8 sm:p-12 md:p-16 text-center shadow-xs">
+              <div className="inline-flex items-center gap-1.5 rounded-md bg-corporate-blue/10 px-3.5 py-1 text-xs font-bold text-corporate-blue uppercase tracking-wider mb-4 border border-corporate-blue/20">
                 <CalendarCheck2 className="h-4 w-4" /> Claim Your Growth Audit
               </div>
 
-              <h2 className="relative text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-                Ready to Fill Your Calendar With Qualified Leads?
+              <h2 className="relative text-3xl font-bold tracking-tight text-black sm:text-4xl lg:text-5xl">
+                Ready to Fill Your Calendar With{" "}
+                <span className="text-heading-gradient">Qualified Leads?</span>
               </h2>
 
-              <p className="relative mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
+              <p className="relative mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
                 Book your free, no-obligation business evaluation today. We will show you exactly how many leads your business is missing out on and how to capture them predictably.
               </p>
 
               <div className="relative mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button size="lg" className="shadow-lg hover:scale-[1.02] transition-transform" asChild>
+                <Button size="lg" className="shadow-md hover:scale-[1.02] transition-transform" asChild>
                   <a href="#audit-form">
                     Book My Free Evaluation
                     <ArrowRight className="h-4 w-4" />
@@ -687,9 +719,9 @@ export function GoogleAdsLanding() {
 
                 <a
                   href={`tel:${site.phone}`}
-                  className="inline-flex h-12 items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 text-sm font-semibold text-white transition hover:bg-bright-blue hover:border-bright-blue hover:text-white"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-corporate-blue/30 bg-white px-7 text-sm font-semibold text-black transition hover:border-corporate-blue hover:bg-corporate-blue hover:text-white"
                 >
-                  <Phone className="h-4 w-4 text-bright-blue" />
+                  <Phone className="h-4 w-4 text-corporate-blue" />
                   <span>Call {site.phone}</span>
                 </a>
               </div>
